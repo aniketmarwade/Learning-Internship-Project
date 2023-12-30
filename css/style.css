@@ -19,7 +19,7 @@
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
-  --bs-yellow: #ffc107;
+  --bs-yellow: #fbcb0c;
   --bs-green: #198754;
   --bs-teal: #20c997;
   --bs-cyan: #0dcaf0;
@@ -2312,6 +2312,7 @@ textarea.form-control-lg {
   margin-right: 1rem;
 }
 
+
 .btn-check {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -2739,7 +2740,8 @@ textarea.form-control-lg {
   display: inline-block;
   font-weight: 400;
   line-height: 1.5;
-  color: #fff;
+  color: #fbcb0c
+  ;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -8778,11 +8780,11 @@ h6, .h6 {
 }
 
 .nav-pills .nav-link:hover {
-  color: #3f9457 !important;
+  color: black !important;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: #51B56D;
+  background-color: #fbcb0c;
 }
 
 body {
@@ -8898,7 +8900,7 @@ a:hover {
 }
 
 .text-primary {
-  color: #51B56D !important;
+  color: #fbcb0c  !important;
 }
 
 .text-black {
@@ -9442,8 +9444,8 @@ blockquote::before {
   width: 70px;
   line-height: 70px;
   border-radius: 8px;
-  color: #51B56D;
-  background-color: rgba(81, 181, 109, 0.2);
+  color: #fbcb0c;
+  background-color: black;
 }
 .service-item .service-title {
   transition: color 0.3s;
@@ -9452,7 +9454,8 @@ blockquote::before {
   color: #888888;
 }
 .service-item a:hover .service-title {
-  color: #51B56D;
+  color: #fbcb0c
+  ;
 }
 .service-item a:hover .service-description {
   color: #888888;
@@ -9483,8 +9486,8 @@ blockquote::before {
   }
 }
 .service-item:nth-child(even) .colored-box {
-  color: #917AEB;
-  background-color: rgba(145, 122, 235, 0.2);
+  color: #fbcb0c;
+  background-color: black;
 }
 .service-item:hover {
   border-color: transparent;
@@ -9726,7 +9729,7 @@ blockquote::before {
   font-size: 24px;
   font-weight: 700;
   border-radius: 50%;
-  color: #fff;
+  color: black;
   position: relative;
   font-family: "Rubik", sans-serif;
 }
@@ -9750,7 +9753,7 @@ blockquote::before {
   content: "";
   height: 1px;
   width: 100%;
-  border: 1px dashed #51B56D;
+  border: 1px dashed #fbcb0c;
   top: 50px;
   left: 50%;
   z-index: -1;
@@ -9759,7 +9762,8 @@ blockquote::before {
   display: none;
 }
 .loan-steps .step-item .count {
-  background-color: #51B56D;
+  background-color: #fbcb0c
+  ;
 }
 @media (max-width: 991px) {
   .loan-steps .step-item:nth-child(2)::before, .loan-steps .step-item:nth-child(3)::before, .loan-steps .step-item:nth-child(6)::before {
