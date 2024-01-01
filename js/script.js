@@ -96,9 +96,9 @@ $(window).on("load", function () {
 
 
 
-$(document).on('click', '.smart-banner .close', function (event) {
+$(document).on('click', '.sma .cl', function (event) {
   event.preventDefault();
-	var $banner = $('.smart-banner');
+	var $banner = $('.sma');
   $banner.css('margin-top',0 - $banner.outerHeight());
   //set cookie
 });
