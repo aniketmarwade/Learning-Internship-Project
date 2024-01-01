@@ -10130,3 +10130,117 @@ textarea.form-control {
   padding: 10px;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+    .clearfix {
+  zoom:1;
+	&:before, &:after {
+    content: " "; /* 1 */
+    display: flex; /* 2 */
+  }
+  &:after {
+    clear: both;
+	}
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                               left bottom,
+                               left top,
+                               color-stop(0, @start),
+                               color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom,@start,@stop);
+  background: -moz-linear-gradient(center bottom,@start 0%,@stop 100%);
+}
+
+.box-sizing(@value) {
+	-webkit-box-sizing:@value;
+  -moz-box-sizing:@value;
+  -ms-box-sizing:@value;
+  -o-box-sizing:@value;
+  box-sizing:@value;
+}
+
+.smart-banner {
+  display:flex;
+  .clearfix;
+	background-color:black;
+   padding:10px 20px 20px 30px;
+  align-items:center;
+  -webkit-transition:margin-top .3s linear;
+}
+
+  
+  &.closed {
+  	margin-top:-100%;
+  }
+  
+  .meta {
+    width: 70%;
+    display: flex;
+  }
+  .name {
+    color:#fbcb0c;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .author {
+  	display:block;
+    font-size:14px;
+    color:#ffff;
+    padding-top:2px;
+  }
+  
+  .icon {
+    @square: 50px;
+  height: @square;
+  width: calc(@square * 4.6); /* Initially uses square value multiplied by 4.6 */
+  border-radius: @square / 6.4;
+  vertical-align: top;
+  box-shadow: 0 1px 3px black;
+  margin: 0 10px;
+
+  @media (max-width: 768px) {
+    width: calc(@square * 1); /* Scales down proportionally on mobile */
+    margin: 0 5px;
+     }
+    
+     @media (max-width: 640px) {
+    width: calc(@square * 1); /* Scales down proportionally on mobile */
+    margin: 0 5px;
+
+  }
+}
+  
+  .close {
+    font-size:22px;
+    text-align:center;
+    text-decoration:none;
+    color:#fbcb0c;
+  }
+
+  
+  .btn-DownloadApp {
+    text-decoration:none;
+    margin-top:10px;
+    float:right;
+    text-align: center;
+    color: black;
+    padding:5px 20px ;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    .gradient(#fbcb0c,#fbcb0c,#fbcb0c);
+    /*background: -webkit-gradient(linear, left top, left bottom,
+      from(#838383),
+      color-stop(.49, #444444),
+      color-stop(.49,#303030),
+      to(#333333));*/
+    border: solid 1px rgba(79, 79, 79, 0.75);
+  }

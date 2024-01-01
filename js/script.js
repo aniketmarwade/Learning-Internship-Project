@@ -93,3 +93,12 @@ $(window).on("load", function () {
     scrollOffset: 10,
   });
 })(jQuery);
+
+
+
+$(document).on('click', '.smart-banner .close', function (event) {
+  event.preventDefault();
+	var $banner = $('.smart-banner');
+  $banner.css('margin-top',0 - $banner.outerHeight());
+  //set cookie
+});
