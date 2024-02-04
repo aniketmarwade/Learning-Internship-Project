@@ -465,14 +465,25 @@
 </footer>
 
 
-<!-- # JS Plugins -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<script src="plugins/bootstrap/bootstrap.min.js"></script>
-<script src="plugins/slick/slick.min.js"></script>
-<script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+<script>
 
-<!-- Main Script -->
-<script src="js/script.js"></script>
+	$(document).ready(function(){
+		$('.carousel').bxSlider({
+			pager: false,
+			slideMargin: 30,
+			controls: false,
+			speed: 60000,
+			useCSS: false,
+			ticker: true,
+			tickerHover: true,
+			slideWidth: 300,
+			responsive: false,
+			minSlides: 1,
+			maxSlides: 4,
+		});
+	});
+	  
+	</script>
 
 </body>
 </html>
