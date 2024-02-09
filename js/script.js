@@ -102,3 +102,6 @@ $(document).on('click', '.sma .cl', function (event) {
   $banner.css('margin-top',0 - $banner.outerHeight());
   //set cookie
 });
+
+
+
