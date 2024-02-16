@@ -18,6 +18,7 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
   <link rel="icon" href="images/favicon.png" type="image/x-icon">
   <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  
 
   
 
@@ -156,6 +157,15 @@
 .bx-viewport {
 	padding: 40px 0 40px 0;
 }
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 5px #ccc !important;
+     -webkit-box-shadow: 0 0 0px #ccc !important; 
+     box-shadow: 0 0 0px #ccc !important; 
+     border: 0px solid #fff !important; 
+     background: #fff !important; 
+     align-items: center  !important;
+}
 /*slider css  end*/
   </style>
   <!-- theme meta -->
@@ -183,7 +193,7 @@
  
    <!-- Main Script -->
    <script src="js/script.js"></script>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.15/jquery.bxslider.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
    <script>
     
@@ -204,8 +214,26 @@
         maxSlides: 4,
         infiniteLoop:true,
       });
-      
     }
+
+    function Cohartslide()
+    { 
+     $('.cohart').bxSlider({
+        pager: false,
+        slideMargin: 20,
+        controls: true,
+        speed: 1000,
+        useCSS: true,
+        ticker: false,
+        tickerHover: true,
+        slideWidth: 400,
+        responsive: true,
+        minSlides: 1.3,
+        maxSlides: 3,
+        infiniteLoop:true,
+  });
+
+}
     </script>
  
 </head>
@@ -731,8 +759,8 @@
             </div>
           </div>
         </div> -->
-        <div class="containerr">
-          <div class="cardss">
+        <div class="containerr cohart">
+          <div class="cardss item">
             <div class="card-item">
               <div class="card-image">
                 <img src="images/8Bits Aptitude HTML & CSS.png" alt="Girl in a jacket" width="500" height="600">
@@ -744,7 +772,7 @@
               </div>
             </div>
           </div>
-          <div class="cardss">
+          <div class="cardss item">
             <div class="card-item">
               <div class="card-image">
                 <img src="images/8Bits Aptitude HTML & CSS.png" alt="Girl in a jacket" width="500" height="600">
@@ -756,7 +784,7 @@
               </div>
             </div>
           </div>
-          <div class="cardss">
+          <div class="cardss item">
             <div class="card-item">
               <div class="card-image">
                 <img src="images/8Bits Aptitude HTML & CSS.png" alt="Girl in a jacket" width="500" height="600">
@@ -769,6 +797,18 @@
             </div>
           </div>
           
+          <div class="cardss item">
+            <div class="card-item">
+              <div class="card-image">
+                <img src="images/8Bits Aptitude HTML & CSS.png" alt="Girl in a jacket" width="500" height="600">
+
+              </div>
+              <div class="card-info">
+                <h2 class="card-title">Real Time Case Study By Industry Expert</h2>
+                <p class="card-intro"></p>
+              </div>
+            </div>
+          </div>
       
       
       </div>
@@ -1237,6 +1277,7 @@
     $(document).ready(function () 
 	  {
 		  slider();
+      Cohartslide();
      
 	  });
   </script>
