@@ -9614,7 +9614,7 @@ blockquote::before {
 .page-header {
   position: relative;
   overflow: hidden;
-  padding: 80px 0;
+ /* padding: 80px 0; */
   z-index: 5;
 }
 .page-header .has-shapes {
