@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>8BitGurus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta name="description" content="This is meta description">
+  <meta name="author" content="8BitGurus">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gulp/3.8.5/gulp.min.js" integrity="sha512-/t2QTDqdi+qF/biht8vq9VhWvE2bmMHasiO1PWPGql4BIZwa/XrhbzO098+R9GGK4yBIFKBFvLZ7SIhsZrIUgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    section {
+      min-height: 1vh;
+    }
+
+    .slider {
+      height: 60px;
+      position: relative;
+      width: 100%;
+
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .slider::before,
+    .slider::after {
+      position: absolute;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      content: '';
+      height: 100%;
+      width: 15%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .slider::before {
+      left: 0;
+      top: 0;
+    }
+
+    .slider::after {
+      right: 0;
+      top: 0;
+      transform: rotateZ(180deg);
+    }
+
+    /*  IMPORTANT CODE BELOW */
+
+    .slide-track {
+      width: calc(150px * 20);
+      display: flex;
+      animation: scroll 15s linear infinite;
+      justify-content: space-between;
+    }
+
+    .slide-track2 {
+      width: calc(150px * 20);
+      display: flex;
+      animation: scroll2 15s linear infinite;
+      justify-content: space-between;
+    }
+
+    .slide {
+      width: 150px;
+      height: 50px;
+
+      display: grid;
+      place-items: center;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .slide:hover {
+      transform: scale(0.8)
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0px);
+      }
+
+      100% {
+        transform: translateX(calc(-150px * 10));
+      }
+    }
+
+    @keyframes scroll2 {
+      0% {
+
+        transform: translateX(calc(-150px * 10));
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .slide-track {
+        width: calc(80px * 20);
+      }
+
+      .slide-track2 {
+        width: calc(80px * 20);
+      }
+
+      .slide {
+        width: 80px;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0px);
+        }
+
+        100% {
+          transform: translateX(calc(-80px * 10));
+        }
+      }
+
+      @keyframes scroll2 {
+        0% {
+
+          transform: translateX(calc(-80px * 10));
+        }
+
+        100% {
+          transform: translateX(0px);
+        }
+      }
+    }
+
+/*slider css  Start*/
+.bx-viewport, .bx-wrapper {
+	background: none;
+	border: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	max-width: none !important;
+}
+.bx-viewport {
+	padding: 40px 0 40px 0;
+}
+
+.bx-wrapper {
+    -moz-box-shadow: 0 0 5px #ccc !important;
+     -webkit-box-shadow: 0 0 0px #ccc !important; 
+     box-shadow: 0 0 0px #ccc !important; 
+     border: 0px solid #fff !important; 
+     background: #fff !important; 
+     align-items: center  !important;
+}
+/*slider css  end*/
+  </style>
+  <!-- theme meta -->
+  <meta name="theme-name" content="wallet" />
+
+  <!-- # Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- # CSS Plugins -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="plugins/font-awesome/fontawesome.min.css">
+  <link rel="stylesheet" href="plugins/font-awesome/brands.css">
+  <link rel="stylesheet" href="plugins/font-awesome/solid.css">
+
+  <!-- # Main Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+   <!-- # JS Plugins -->
+   <script src="plugins/jquery/jquery.min.js"></script>
+   <script src="plugins/bootstrap/bootstrap.min.js"></script>
+   <script src="plugins/slick/slick.min.js"></script>
+   <script src="plugins/scrollmenu/scrollmenu.min.js"></script>
+ 
+   <!-- Main Script -->
+   <script src="js/script.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+   <script>
+    
+
+    function slider()
+    {
+      $('.carousel').bxSlider({
+        pager: false,
+        slideMargin: 30,
+        controls: true,
+        speed: 8000,
+        useCSS: false,
+        ticker: true,
+        tickerHover: true,
+        slideWidth: 400,
+        responsive: true,
+        minSlides: 1,
+        maxSlides: 4,
+        infiniteLoop:true,
+      });
+    }
+
+    function Cohartslide()
+    { 
+     $('.cohart').bxSlider({
+        pager: false,
+        slideMargin: 20,
+        controls: true,
+        speed: 1000,
+        useCSS: true,
+        ticker: false,
+        tickerHover: true,
+        slideWidth: 400,
+        responsive: true,
+        minSlides: 1.3,
+        maxSlides: 3,
+        infiniteLoop:true,
+  });
+
+}
+    </script>
+ 
+</head>
+
+<body>
+
+  <div class="container-fluid sma bg-black">
+    <div class="row">
+      <div class="
+       col-6  d-flex pt-3 ">
+        <a href="#close" class="cl font-bold pr-2">&times;</a>
+        <div class="meta">
+          <span class="name "> Download Our
+            <b>Mobile App</b></span>
+        </div>
+      </div>
+      <div class="
+      col-6 text-right pt-1.5 pb-2 ">
+        <a href="#" class="btn btn-outline-primary" style="margin-left: 20px;">Download</a>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+  <!-- <div class="smart-banner">
+    <a href="#close" class="close">&times;</a>
+    <div class="meta"> -->
+  <!-- <span class="name"> Download Our 
+        <b>MobileApp</b></span>
+    </div> -->
+  <!-- <a href="#!" class="btn btn-outline-primary " style="margin-left: 20px;">Download</a>  </div> -->
+
+
+  <!-- navigation -->
+  <header class="navigation bg-tertiary">
+    <nav class="navbar navbar-expand-xl navbar-light text-center py-3">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="230" src="images/logo.png" alt="Wallet">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+            class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"> <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="https://learn.8bitgurus.com">Learn</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="#programs">Programs</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="#internship">Internship</a>
+            </li>
+            <li class="nav-item "> <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            
+          </ul>
+          <!-- account btn --> <a href="https://learn.8bitgurus.com/t/home" class="btn btn-outline-primary">Sign Up</a>
+          <!-- account btn --> <a type="button" class="btn btn-primary m-1 " href="#" data-bs-toggle="modal"
+            data-bs-target="#applyLoan">Apply as Mentor <span style="font-size: 14px;"></span></a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+
+
+
+
+
+
+
+
+  <footer class="section-sm bg-tertiary ">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="footer-widget">
+            <h5 class="mb-4 text-primary font-secondary">Programs</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Data Analytics</a>
+              </li>
+              <li class="mb-2"><a href="#">Web Technologies</a>
+              </li>
+              <li class="mb-2"><a href="#">Consulting</a>
+              </li>
+              <li class="mb-2"><a href="#">Project Development</a>
+              </li>
+              <li class="mb-2"><a href="#">Skill Evaluation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="footer-widget">
+            <h5 class="mb-4 text-primary font-secondary">Enagage</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#!">Apply As a Mentor</a>
+              </li>
+              <li class="mb-2"><a href="#!">Our LMS</a>
+              </li>
+              <li class="mb-2"><a href="#!">Join Community</a>
+              </li>
+              <li class="mb-2"><a href="#!">Team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-6 mb-4">
+          <div class="footer-widget">
+            <h5 class="mb-4 text-primary font-secondary">Help</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="contact.html">Contact Us</a>
+              </li>
+              <li class="mb-2"><a href="faq.html">FAQs</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 newsletter-form">
+          <div style="background-color: #000000; padding: 35px;text-align:center;">
+            <h4 class="mb-4 text-warning">Download Our Mobile App</h4>
+            <div class="pe-0 " style="justify-content: space-evenly;display: flex;">
+              <a href="#!" class="btn btn-outline-primary"> Android</a>
+              <a href="#!" class="btn btn-outline-primary ml-2">IOS App</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center mt-5 text-center text-md-start">
+        <div class="col-lg-4">
+          <a href="index.html">
+            <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="8 BitGurus">
+          </a>
+          <hr> 
+          <p Style="color: #000;"> © 2024 Brightyfy. All rights reserved.</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
+          <ul class="list-unstyled list-inline mb-0 text-lg-center">
+            </li>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
+          <ul class="list-unstyled list-inline mb-0 social-icons">
+            <li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black"
+                href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black"
+                href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black"
+                href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () 
+	  {
+		  slider();
+      // Cohartslide();
+     
+	  });
+  </script>
+</body>
+
+</html>
